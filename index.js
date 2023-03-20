@@ -5,12 +5,12 @@ const traindata = require('./controller/scoreController');
 
 dotenv.config({ path: './config.env' });
 
-//Connecting backend to mongoose data base
+//Connecting backend to database using mongoose
 mongoose.connect(process.env.DB).then(() => {
   console.log('DB connection successful');
 });
 
-//checking if database containes traineddatset
+//checking if database contains trained dataset
 if (process.env.TRAINDATA === 'true') {
   traindata.traineddata;
 }

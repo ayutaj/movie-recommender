@@ -3,7 +3,7 @@ require('dotenv').config();
 const moviesRouter = require('./router/movieroute');
 //This is app.js which calls different controllers and routers
 
-//use of middleware to awiat query from user
+//use of middleware to await query from user
 const app = express();
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`, { index: 'overview.html' }));
